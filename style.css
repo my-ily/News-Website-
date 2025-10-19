@@ -1,27 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Roboto:wght@400;500&display=swap');
-:root {
-  --light-bg: #f8f9fa;
-  --dark-bg: #121212;
-  --text-dark: #222;
-  --text-light: #f8f8f8;
-  --primary: #007bff;
-}
 
 
 
 body {
-  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: black;
 }
+
 
 h1, h2, h3, h4, h5 {
   font-family: 'Lora', serif;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   background: url('./Breaknewshero.jpg') center/cover no-repeat;
-  height: 50vh;
+  height: 70vh;
   color: #fff;
   display: flex;
   align-items: center;
@@ -30,13 +24,13 @@ h1, h2, h3, h4, h5 {
   overflow: hidden;
 }
 
-/* طبقة الضباب */
+
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3); /* تغميق خفيف */
-  backdrop-filter: blur(4px); /* ضباب خفيف */
+  background: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(4px); 
   -webkit-backdrop-filter: blur(4px);
   z-index: 1;
 }
@@ -60,13 +54,8 @@ h1, h2, h3, h4, h5 {
   font-weight: 400;
 }
 
-/* Fade-in Animation */
-@keyframes fadeIn {
-  0% {opacity: 0; transform: translateY(20px);}
-  100% {opacity: 1; transform: translateY(0);}
-}
-
-/* News Cards */
+/* 
+/* News Cards 
 .news-card {
    min-width: 250px;
   max-width: 500px;
@@ -86,7 +75,7 @@ h1, h2, h3, h4, h5 {
 .news-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
+} */
 
 /* Footer */
 .footer {
@@ -94,83 +83,12 @@ h1, h2, h3, h4, h5 {
   border-top: 1px solid #ddd;
 }
 
-/* Dark Mode */
-body.dark {
-  background-color: var(--dark-bg);
-  color: var(--text-light);
-}
-
-body.dark .navbar,
-body.dark .footer {
-  background-color: #1e1e1e;
-}
-
-body.dark .news-card {
-  background-color: #222;
-  color: var(--text-light);
-}
-
-body.dark .btn-outline-dark {
-  color: #f8f8f8;
-  border-color: #f8f8f8;
-}
-
-/* 
-.top-creator-section .creator-card {
-  border-radius: 15px;
-  background-color: #fff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.top-creator-section .creator-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
-
-.top-creator-section img {
-  object-fit: cover;
-} */
-/* .subscribe-form{
- border: 1px solid black;
- height: 200px;
-  padding: 30px;
-
-}
-.subscribe-form input {
-  max-width: 300px;
-}
-
-.subscribe-form button {
-  white-space: nowrap;
-} */
-
 
 
 .subscription.bg-white {
     background: none;
 }
 
-.bg-white {
-    background-color: #fff!important;
-}
-
-.subscription.bg-white .subscription-wrapper {
-    background: #fff;
-}
-
-.subscription-wrapper {
-    border-radius: 0% 5% 10% 3%/10% 20% 0% 17%;
-    -webkit-transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
-    transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
-    padding: 70px 50px;
-    z-index: 1;
-    width: 100%;
-    background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
-    position: absolute;
-    top:100px;
-    
-}
 
 .subscription-wrapper {
     box-shadow: 0px 15px 39px 0px rgba(8, 18, 109, 0.1) !important;
@@ -181,14 +99,7 @@ body.dark .btn-outline-dark {
     transform: skewY(-1deg);
 }
 
-h3, .h3 {
-    font-size: 30px;
-}
 
-.flex-fill {
-    -ms-flex: 1 1 auto!important;
-    flex: 1 1 auto!important;
-}
 
 .subscription.bg-white .form-control {
     border: 1px solid #ebebeb !important;
@@ -206,39 +117,3 @@ h3, .h3 {
     box-shadow: none;
 }
 
-.btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-}
-
-.btn-primary {
-    border: 0;
-    color: #fff;
-}
-
-
-
-.btn {
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    text-transform: capitalize;
-    padding: 18px 45px;
-    border-radius: 45px;
-    font-weight: 500;
-    border: 1px solid;
-    position: relative;
-    z-index: 1;
-    transition: .3s ease-in;
-    overflow: hidden;
-}
-
-.btn-primary:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 102%;
-    height: 100%;
-    background:linear-gradient(to right, #333333, #dd1818); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    z-index: -1;
-    transition: ease 0.3s;
-}
